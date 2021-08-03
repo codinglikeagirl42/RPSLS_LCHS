@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors, Lizard, Spock!</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <section class="centered">
+        
+        <form action="/bye" method="POST">
+               
+            <h2>Rock, Paper, Scissors, Lizard, Spock!</h2>
+            
+            Player({{user_input}}) vs Computer({{computer_choice}})
+            <br>
+            <br>
+            {% if user_input == computer_choice %}
+                {% if user_input == "Rock" %}
+                    <img src="{{url_for('static', filename='Rock.png')}}" alt="Rock" width="15%"/>
+                {% elif user_input == "Paper" %}
+                    <img src="{{url_for('static', filename='Paper.png')}}" alt="Paper" width="15%"/>
+                {% elif user_input == "Scissors" %}
+                    <img src="{{url_for('static', filename='Scissors.png')}}" alt="Scissors" width="15%"/>
+                {% elif user_input == "Lizard" %}
+                    <img src="{{url_for('static', filename='Lizard.png')}}" alt="Lizard" width="15%"/>
+                {% else  %}
+                    <img src="{{url_for('static', filename='Spock.png')}}" alt="Spock" width="15%"/>
+                {% endif %}
+                <h3>{{messageis}}</h3>
+            {% elif messageis == "Scissors cuts Paper" %}    
+                <img src="{{url_for('static', filename='Scissors.png')}}" alt="Scissors" width="15%"/>
+                <h3>Cuts</h3><img src="{{url_for('static', filename='Paper.png')}}" alt="Paper" width="15%"/>
+            {% elif messageis == "Paper covers Rock" %}    
+                <img src="{{url_for('static', filename='Paper.png')}}" alt="Paper" width="15%"/>
+                <h3>Covers</h3><img src="{{url_for('static', filename='Rock.png')}}" alt="Rock" width="15%"/>
+            {% elif messageis == "Rock crushes Lizard" %}    
+                <img src="{{url_for('static', filename='Rock.png')}}" alt="Rock" width="15%"/>
+                <h3>Crushes</h3><img src="{{url_for('static', filename='Lizard.png')}}" alt="Lizard" width="15%"/>
+            {% elif messageis == "Lizard poisons Spock" %}    
+                <img src="{{url_for('static', filename='Lizard.png')}}" alt="Lizard" width="15%"/>
+                <h3>Poisons</h3><img src="{{url_for('static', filename='Spock.png')}}" alt="Spock" width="15%"/>
+            {% elif messageis == "Spock smashes Scissors" %}    
+                <img src="{{url_for('static', filename='Spock.png')}}" alt="Spock" width="15%"/>
+                <h3>Smashes</h3><img src="{{url_for('static', filename='Scissors.png')}}" alt="Scissors" width="15%"/>
+            {% elif messageis == "Scissors decapitates Lizard" %}    
+                <img src="{{url_for('static', filename='Scissors.png')}}" alt="Scissors" width="15%"/>
+                <h3>Decapitates</h3><img src="{{url_for('static', filename='Lizard.png')}}" alt="Lizard" width="15%"/>
+            {% elif messageis == "Lizard eats Paper" %}    
+                <img src="{{url_for('static', filename='Lizard.png')}}" alt="Lizard" width="15%"/>
+                <h3>Eats</h3><img src="{{url_for('static', filename='Paper.png')}}" alt="Paper" width="15%"/>
+            {% elif messageis == "Paper disproves Spock" %}    
+                <img src="{{url_for('static', filename='Paper.png')}}" alt="Paper" width="15%"/>
+                <h3>Disproves</h3><img src="{{url_for('static', filename='Spock.png')}}" alt="Spock" width="15%"/>
+            {% elif messageis == "Spock vaporizes Rock" %}    
+                <img src="{{url_for('static', filename='Spock.png')}}" alt="Spock" width="15%"/>
+                <h3>Vaporizes</h3><img src="{{url_for('static', filename='Rock.png')}}" alt="Rock" width="15%"/>
+            {% else %}
+                <h3>and as it always has</h3><img src="{{url_for('static', filename='Rock.png')}}" alt="Rock" width="15%"/>
+                <h3>Crushes</h3><img src="{{url_for('static', filename='Scissors.png')}}" alt="Scissors" width="15%"/>
+            
+            {% endif %}    
+            
+                
+            <br>
+            <h4>{{winneris}}</h4>
+            <h4>Score: Player - win-record vs Computer - win-record</h4>
+            <button name="play_again" value="True">Rematch</button><button name="play_again" value="False">Quit</button>
+            <br>
+        </form>
+    </section>
+</body>
+</html>

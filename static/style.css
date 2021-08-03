@@ -1,0 +1,89 @@
+input {
+    margin: 5px;
+}
+
+input[type=number] {
+    width: 15%;
+
+}
+
+label {
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+ 
+button {
+    text-shadow: 2px 2px 4px rgb(12, 104, 19);
+    font-size: x-large;
+    color: rgb(1, 41, 7);
+    background-color: #b4e6fc;
+    border: 1px groove rgb(147, 241, 135);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    width: 15%;
+}
+
+.button_original {
+    font-size: small;
+    color: white;
+    background-color: rgb(49, 91, 139);
+    border: 1px groove rgb(4, 54, 73);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+}
+
+.img_button {
+    background-color: #27b1ec;
+    border: 3px groove rgb(12, 104, 19);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    width: 15%;
+    
+}
+
+.centered {
+    text-align: center;
+}
+
+form {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 60%;
+    background-color: #afe7ff;
+    border: 4px ridge rgb(1, 41, 7);
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28pt;
+    text-shadow: 2px 2px 4px rgb(12, 104, 19);
+    text-align: center;
+}
+
+h3 {
+    font-size: 24pt;
+    text-shadow: 2px 2px 4px rgb(12, 104, 19);
+    text-align: center;
+}
+
+
+em {
+    font-size: 16pt;
+    color:#208ab8
+}
+.error {
+    color: rgb(147, 241, 135);
+    text-align: center;
+    font-size: x-large;
+}
+
+div {  
+    float:inline; 
+} 

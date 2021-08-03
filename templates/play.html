@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors, Lizard, Spock!</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <section class="centered">
+        
+        <form action="/winner" method="POST">
+               
+            <h2>Rock, Paper, Scissors, Lizard, Spock!</h2>   
+            <p><strong>Rules:</strong></p><em><strong>Scissors cuts Paper, <br>Paper covers Rock,
+                <br>Rock crushes Lizard, <br>Lizard poisons Spock, <br>Spock smashes Scissors, 
+                <br>Scissors decapitates Lizard, <br>Lizard eats Paper, <br>Paper disproves Spock, <br>Spock vaporizes Rock,
+            <br>and as it always has Rock crushes Scissors</strong> </em>
+            <h3>Choose Wisely!</h3>
+            <button disabled class = "img_button"><img src="{{url_for('static', filename='Rock.png')}}" alt="Rock" width="70%"></button>
+            <button disabled class = "img_button"><img src="{{url_for('static', filename='Paper.png')}}" alt="Paper" width="70%"/></button>
+            <button disabled class = "img_button"><img src="{{url_for('static', filename='Scissors.png')}}" alt="Scissors" width="70%"/></button>
+            <button disabled class = "img_button"><img src="{{url_for('static', filename='Lizard.png')}}" alt="Lizard" width="70%"/></button>
+            <button disabled class = "img_button"><img src="{{url_for('static', filename='Spock.png')}}" alt="Spock" width="70%"/></button>
+             <br>  
+            <button name="user_input" value="Rock">Rock</button>
+            <button name="user_input" value="Paper">Paper</button>
+            <button name="user_input" value="Scissors">Scissors</button>
+            <button name="user_input" value="Lizard">Lizard</button>
+            <button name="user_input" value="Spock">Spock</button>
+             
+        
+        </form>
+    </section>
+</body>
+</html>
